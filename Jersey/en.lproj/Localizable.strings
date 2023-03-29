@@ -6,12 +6,21 @@
   
 */
 
-"TEAM" = "TEAM";
-"PLAYER" = "PLAYER";
-"YEAR" = "YEAR";
-"IMAGE" = "IMAGE";
+"noJerseysAdded" = "You haven't added any jerseys yet.";
+"jerseyCollection" = "Jersey Collection";
+"Image" = "Image";
 "Choose Image" = "Choose Image";
+"Team" = "Team";
+"Enter team name" = "Enter team name";
+"Player" = "Player";
+"Enter player name" = "Enter player name";
+"Year" = "Year";
+"Enter year" = "Enter year";
 "Add Jersey" = "Add Jersey";
-"You haven't added any jerseys yet." = "You haven't added any jerseys yet.";
 "Cancel" = "Cancel";
+"Save" = "Save";
+"App Language" = "App Language";
+"Select language" = "Select language";
+"Settings" = "Settings";
+"Done" = "Done";
 

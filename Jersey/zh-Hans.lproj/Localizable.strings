@@ -6,21 +6,20 @@
   
 */
 
-"Jersey Collection" = "我的球衣";
-"New Team" = "新球队";
-"New Player" = "新球员";
-"New Year" = "新年份";
-"Settings" = "设置";
-"Select Language" = "选择语言";
-"Save" = "保存";
-"Close" = "关闭";
-"You haven't added any jerseys yet." = "目前还没有球衣";
-
-"TEAM" = "队伍";
-"PLAYER" = "球员";
-"YEAR" = "年";
-"IMAGE" = "球衣照片";
-"Choose Image" = "选择一张照片";
+"noJerseysAdded" = "您尚未添加任何球衣。";
+"jerseyCollection" = "球衣收藏";
+"Image" = "图片";
+"Choose Image" = "选择图片";
+"Team" = "球队";
+"Enter team name" = "输入球队名称";
+"Player" = "球员";
+"Enter player name" = "输入球员名称";
+"Year" = "年份";
+"Enter year" = "输入年份";
 "Add Jersey" = "添加球衣";
 "Cancel" = "取消";
-
+"Save" = "保存";
+"App Language" = "应用程序语言";
+"Select language" = "选择语言";
+"Settings" = "设置";
+"Done" = "完成";

@@ -15,8 +15,6 @@
 		A14CCFB629D3BA6F007B21BC /* JerseyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CCFB529D3BA6F007B21BC /* JerseyTests.swift */; };
 		A14CCFC029D3BA6F007B21BC /* JerseyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CCFBF29D3BA6F007B21BC /* JerseyUITests.swift */; };
 		A14CCFC229D3BA6F007B21BC /* JerseyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CCFC129D3BA6F007B21BC /* JerseyUITestsLaunchTests.swift */; };
-		A15555FF29D3D07100F88307 /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15555FE29D3D07100F88307 /* LocalizationService.swift */; };
-		A155560129D3D28600F88307 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155560029D3D28600F88307 /* Language.swift */; };
 		A155560429D3D43A00F88307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A155560629D3D43A00F88307 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -49,11 +47,10 @@
 		A14CCFBB29D3BA6F007B21BC /* JerseyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JerseyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14CCFBF29D3BA6F007B21BC /* JerseyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JerseyUITests.swift; sourceTree = "<group>"; };
 		A14CCFC129D3BA6F007B21BC /* JerseyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JerseyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A15555FE29D3D07100F88307 /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
-		A155560029D3D28600F88307 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		A155560529D3D43A00F88307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A155560729D3D43D00F88307 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A155560829D3D43F00F88307 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A155560A29D4366E00F88307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Jersey/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +81,7 @@
 		A14CCF9829D3BA6E007B21BC = {
 			isa = PBXGroup;
 			children = (
+				A155560929D4366E00F88307 /* Localizable.strings */,
 				A14CCFA329D3BA6E007B21BC /* Jersey */,
 				A14CCFB429D3BA6F007B21BC /* JerseyTests */,
 				A14CCFBE29D3BA6F007B21BC /* JerseyUITests */,
@@ -104,9 +102,7 @@
 		A14CCFA329D3BA6E007B21BC /* Jersey */ = {
 			isa = PBXGroup;
 			children = (
-				A155560029D3D28600F88307 /* Language.swift */,
 				A131512C29D3C1C40060882E /* defaultJersey.jpg */,
-				A15555FE29D3D07100F88307 /* LocalizationService.swift */,
 				A14CCFA429D3BA6E007B21BC /* JerseyApp.swift */,
 				A14CCFA629D3BA6E007B21BC /* ContentView.swift */,
 				A14CCFA829D3BA6F007B21BC /* Assets.xcassets */,
@@ -276,9 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14CCFA729D3BA6E007B21BC /* ContentView.swift in Sources */,
-				A155560129D3D28600F88307 /* Language.swift in Sources */,
 				A14CCFA529D3BA6E007B21BC /* JerseyApp.swift in Sources */,
-				A15555FF29D3D07100F88307 /* LocalizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +315,14 @@
 				A155560529D3D43A00F88307 /* en */,
 				A155560729D3D43D00F88307 /* zh-Hans */,
 				A155560829D3D43F00F88307 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A155560929D4366E00F88307 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A155560A29D4366E00F88307 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

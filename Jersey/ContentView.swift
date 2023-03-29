@@ -13,6 +13,17 @@ class JerseyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var itemNumberLabel: UILabel!
+    
+    func configure(with jersey: Jersey) {
+            jerseyImageView.image = jersey.image
+            teamLabel.text = jersey.team
+            playerLabel.text = jersey.player
+            yearLabel.text = jersey.year
+            brandLabel.text = jersey.brand // 设置品牌文本
+            itemNumberLabel.text = jersey.itemNumber // 设置货号文本
+        }
 }
 
 class JerseyCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -36,33 +47,6 @@ class JerseyCollectionViewController: UICollectionViewController, UIImagePickerC
     
     // MARK: - Image Picker Delegate
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            let alertController = UIAlertController(title: "Add Jersey", message: "Enter the team, player, and year for this jersey.", preferredStyle: .alert)
-            alertController.addTextField { (textField) in
-                textField.placeholder = "Team"
-            }
-            alertController.addTextField { (textField) in
-                textField.placeholder = "Player"
-            }
-            alertController.addTextField { (textField) in
-                textField.placeholder = "Year"
-            }
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                if let team = alertController.textFields?[0].text, let player = alertController.textFields?[1].text, let year = alertController.textFields?[2].text {
-                    let newJersey = Jersey(team: team, player: player, year: year, image: pickedImage)
-                    self.jerseys.append(newJersey)
-                    self.collectionView.reloadData()
-                }
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(okAction)
-            alertController.addAction(cancelAction)
-            picker.dismiss(animated: true, completion: {
-                self.present(alertController, animated: true, completion: nil)
-            })
-        }
-    }
     
     // MARK: - Collection View Data Source
     
@@ -72,10 +56,13 @@ class JerseyCollectionViewController: UICollectionViewController, UIImagePickerC
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JerseyCell", for: indexPath) as! JerseyCollectionViewCell
-        cell.jerseyImageView.image = jerseys[indexPath.row].image
+        
         cell.teamLabel.text = jerseys[indexPath.row].team
         cell.playerLabel.text = jerseys[indexPath.row].player
         cell.yearLabel.text = jerseys[indexPath.row].year
+        cell.brandLabel.text = jerseys[indexPath.row].brand
+        cell.itemNumberLabel.text = jerseys[indexPath.row].itemNumber
+
 
         return cell
     }
@@ -125,6 +112,9 @@ class JerseyDetailViewController: UIViewController {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var itemNumberLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         jerseyImageView.image = jersey?.image
