@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Jersey
+
+  Created by Andy Yu on 2023/3/28.
+  
+*/
+
+"jersey_collection" = "Jersey Collection";
+"new_jersey" = "New Jersey";
+"add_jersey" = "Add Jersey";
+"no_jerseys_added" = "You haven't added any jerseys yet.";
+"team" = "Team";
+"player" = "Player";
+"year" = "Year";
+"settings" = "Settings";
+"language" = "Language";
+"select_language" = "Select Language";
+"save" = "Save";
+"close" = "Close";

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Jersey
+
+  Created by Andy Yu on 2023/3/28.
+  
+*/
+
+"Jersey Collection" = "我的球衣";
+"New Team" = "新球队";
+"New Player" = "新球员";
+"New Year" = "新年份";
+"Settings" = "设置";
+"Select Language" = "选择语言";
+"Save" = "保存";
+"Close" = "关闭";
+"You haven't added any jerseys yet." = "目前还没有球衣";
+
