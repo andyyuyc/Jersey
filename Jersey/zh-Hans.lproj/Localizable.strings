@@ -16,3 +16,11 @@
 "Close" = "关闭";
 "You haven't added any jerseys yet." = "目前还没有球衣";
 
+"TEAM" = "队伍";
+"PLAYER" = "球员";
+"YEAR" = "年";
+"IMAGE" = "球衣照片";
+"Choose Image" = "选择一张照片";
+"Add Jersey" = "添加球衣";
+"Cancel" = "取消";
+
