@@ -46,21 +46,32 @@ struct ContentView: View {
             return jerseys
         }
     }
-
-
+    
+    
     
     var body: some View {
         NavigationView {
-            List {
-                if sortedJerseys.count > 0 {
-                    ForEach(sortedJerseys) { jersey in
-                        JerseyRow(jersey: jersey)
+            VStack {
+                Text("MyJersey")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .padding(.leading)
+                    .padding(.top, 10)
+                    .padding(.bottom, 10)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .background(Color.clear)
+                List {
+                    if sortedJerseys.count > 0 {
+                        ForEach(sortedJerseys) { jersey in
+                            JerseyRow(jersey: jersey)
+                        }
+                        .onDelete(perform: deleteJersey)
+                    } else {
+                        Text(LocalizedStringKey("noJerseysAdded"))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .padding(.vertical, 300)
                     }
-                    .onDelete(perform: deleteJersey)
-                } else {
-                    Text(LocalizedStringKey("noJerseysAdded"))
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                        .padding(.vertical, 300)
                 }
             }
             .navigationBarItems(
@@ -82,10 +93,11 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "plus")
                     }
+                    
                 }
             )
-
-
+            
+            
             .sheet(isPresented: $isShowingAddJerseyModal) {
                 AddJerseyView(jerseys: $jerseys)
             }
@@ -192,7 +204,7 @@ struct AddJerseyView: View {
                             .cornerRadius(10)
                     }
                 }
-
+                
                 Section(header: Text(LocalizedStringKey("Team"))) {
                     TextField(LocalizedStringKey("Enter team name"), text: $team)
                         .padding(.vertical, 5)
@@ -201,7 +213,7 @@ struct AddJerseyView: View {
                 
                 
                 Section(header: Text(LocalizedStringKey("Player"))
-) {
+                ) {
                     TextField(LocalizedStringKey("Enter player name"), text: $player)
                         .padding(.vertical, 5)
                 }
@@ -244,14 +256,17 @@ struct AddJerseyView: View {
 enum AppLanguage: String, CaseIterable, Identifiable {
     case english = "en"
     case chinese = "zh-Hans"
+    case traditionalChinese = "zh-Hant"
     
     var id: String { self.rawValue }
     var displayName: String {
         switch self {
+        case .chinese:
+            return "简体中文"
         case .english:
             return "English"
-        case .chinese:
-            return "中文"
+        case .traditionalChinese:
+            return "繁體中文"
         }
     }
 }
@@ -259,7 +274,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("appLanguage") private var appLanguage: String = AppLanguage.english.rawValue
+    @AppStorage("appLanguage") private var appLanguage: String = AppLanguage.chinese.rawValue
     var body: some View {
         NavigationView {
             Form {

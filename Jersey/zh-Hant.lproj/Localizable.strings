@@ -5,3 +5,28 @@
   Created by Andy Yu on 2023/3/28.
   
 */
+
+"noJerseysAdded" = "您尚未添加任何球衣";
+"jerseyCollection" = "球衣收藏";
+"Image" = "圖片";
+"Choose Image" = "選擇圖片";
+"Team" = "球隊";
+"Enter team name" = "輸入球隊名稱";
+"Player" = "球員";
+"Enter player name" = "輸入球員名稱";
+"Year" = "年份";
+"Enter year" = "輸入年份";
+"Add Jersey" = "添加球衣";
+"Cancel" = "取消";
+"Save" = "保存";
+"App Language" = "應用程序語言";
+"Select language" = "選擇語言";
+"Settings" = "設置";
+"Done" = "完成";
+"Date Added" = "添加日期";
+"Brand" = "品牌";
+"Enter brand" = "輸入品牌";
+"Item Number" = "貨號";
+"Enter item number" = "輸入貨號";
+"You can use the photos in your media library to set up the jersey photos." = "您可以使用媒體資料庫中的照片來設置球衣的照片";
+"MyJersey" = "我的球衣";
